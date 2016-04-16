@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>RESTEasy Tutorial JQuery Get JSON</title>
+
+         <script type="text/javascript" src="inc/jquery-1.4.2.min.js" language="JavaScript"></script>
+         <script type="text/javascript">
+            function getHelloWorld(message){
+                $.getJSON("./rest/hello/world/"+message,
+                    function(dataJson){
+                        alert("Message extract from Json:"+dataJson.world.message);
+                    }
+                );
+            }
+         </script>
+
+    </head>
+    <body>
+        Hello World! You are in the RESTEasy Tutorial JQuery Get JSON
+        <Br>
+        For try an Rest JSON Get with 'Hi' try this link : <a href="./rest/hello/world/Hi">./rest/hello/world/Hi</a>
+        <Br>
+        For try an Ajax Rest JSON Get JQUERY with 'Salut' value, try this button : <button onclick="getHelloWorld('Salut');" >Salut</button>
+    </body>
+</html>
